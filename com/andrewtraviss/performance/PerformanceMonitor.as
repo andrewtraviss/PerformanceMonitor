@@ -34,7 +34,7 @@ package com.andrewtraviss.performance
 		{
 			if(!_instance)
 			{
-				_instance = new PerformanceMonitor();
+				_instance = new PerformanceMonitor(new SINGLETON_TOKEN());
 			}
 			return _instance;
 		}
@@ -42,7 +42,7 @@ package com.andrewtraviss.performance
 		/**
 		 * Constructor. PerformanceMonitor cannot be directly instantiated.
 		 */
-		public function PerformanceMonitor()
+		public function PerformanceMonitor(in_token:SINGLETON_TOKEN)
 		{
 			
 		}
@@ -130,4 +130,9 @@ package com.andrewtraviss.performance
 		
 		private static var _instance:PerformanceMonitor;
 	}
+}
+
+internal class SINGLETON_TOKEN
+{
+	
 }
